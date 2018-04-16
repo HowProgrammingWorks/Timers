@@ -10,6 +10,6 @@ console.log(
 );
 
 console.dir({ setTimeout: setTimeout(() => {}, 0) });
-console.log({ setInterval: setInterval(() => {}, 0) });
-console.log({ setImmediate: setImmediate(() => {}) });
-console.log({ nextTick: process.nextTick(() => {}) });
+console.dir({ setInterval: setInterval(() => {}, 0) });
+console.dir({ setImmediate: setImmediate(() => {}) });
+console.dir({ nextTick: process.nextTick(() => {}) });
