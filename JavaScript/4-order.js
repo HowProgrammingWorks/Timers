@@ -52,10 +52,10 @@ process.nextTick(() => {
   console.log('callback #12 callback');
 });
 
-fs.readFile('./1-order.js', () => {
+fs.readFile('./4-order.js', () => {
   console.log('callback #13 readFile');
 });
 
-fs.readFile('./1-order.js', () => {
+fs.readFile('./4-order.js', () => {
   console.log('callback #14 readFile');
 });
