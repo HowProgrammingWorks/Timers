@@ -1,6 +1,8 @@
 'use strict';
 
-const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
+const sleep = msec => new Promise(resolve => {
+  setTimeout(resolve, msec);
+});
 
 (async () => {
   console.log('Start sleep: ' + new Date().toISOString());
