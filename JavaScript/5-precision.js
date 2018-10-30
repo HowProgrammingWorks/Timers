@@ -1,23 +1,25 @@
 'use strict';
 
-const begin = process.hrtime();
+const begin = process.hrtime.bigint();
+
+const diff = end => (end - begin) / 1000000n;
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('10ms: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log('  10ms: ' + diff(end));
 }, 10);
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('100ms: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log(' 100ms: ' + diff(end));
 }, 100);
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('500ms: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log(' 500ms: ' + diff(end));
 }, 500);
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('1000ms: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log('1000ms: ' + diff(end));
 }, 1000);

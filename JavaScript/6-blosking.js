@@ -1,20 +1,22 @@
 'use strict';
 
-const begin = process.hrtime();
+const begin = process.hrtime.bigint();
+
+const diff = end => (end - begin) / 1000000n;
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('0: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log('  0: ' + diff(end));
 }, 0);
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('10: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log(' 10: ' + diff(end));
 }, 10);
 
 setTimeout(() => {
-  const end = process.hrtime(begin);
-  console.log('20: ' + end[0] + 's ' + end[1] + 'ns');
+  const end = process.hrtime.bigint();
+  console.log(' 20: ' + diff(end));
 }, 20);
 
 const fib = n => (n < 2 ? 1 : fib(n - 1) + fib(n - 2));
