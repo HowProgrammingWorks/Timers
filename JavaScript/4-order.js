@@ -59,3 +59,5 @@ fs.readFile('./4-order.js', 'utf8', () => {
 fs.readFile('./4-order.js', 'utf8', () => {
   console.log('callback #14 readFile');
 });
+
+console.log('main ended');
