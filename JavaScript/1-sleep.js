@@ -1,6 +1,6 @@
 'use strict';
 
-const sleep = msec => {
+const sleep = (msec) => {
   const end = new Date().getTime() + msec;
   while (new Date().getTime() < end);
 };

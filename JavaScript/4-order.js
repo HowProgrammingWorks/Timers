@@ -44,11 +44,11 @@ process.nextTick(() => {
   console.log('callback #10 process.nextTick');
 });
 
-(callback => callback())(() => {
+((callback) => callback())(() => {
   console.log('callback #11 callback');
 });
 
-(callback => callback())(() => {
+((callback) => callback())(() => {
   console.log('callback #12 callback');
 });
 

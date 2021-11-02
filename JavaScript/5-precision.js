@@ -2,7 +2,7 @@
 
 const begin = process.hrtime.bigint();
 
-const diff = end => (end - begin) / 1000000n;
+const diff = (end) => (end - begin) / 1000000n;
 
 setTimeout(() => {
   const end = process.hrtime.bigint();
