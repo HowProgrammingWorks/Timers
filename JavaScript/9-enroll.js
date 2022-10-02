@@ -1,6 +1,6 @@
 'use strict';
 
-const timers = require('timers');
+const timers = require('node:timers');
 
 const timer = {
   _onTimeout: () => {
