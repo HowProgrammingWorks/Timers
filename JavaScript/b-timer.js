@@ -7,11 +7,13 @@ class Timer {
     this.listeners = [];
     this.timer = null;
   }
+
   on(name, fn) {
     if (name === 'timer') {
       this.listeners.push(fn);
     }
   }
+
   start() {
     if (!this.enabled) {
       this.enabled = true;
@@ -21,6 +23,7 @@ class Timer {
       }, this.interval);
     }
   }
+
   stop() {
     if (this.enabled) {
       clearTimeout(this.timer);
