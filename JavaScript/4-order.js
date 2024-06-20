@@ -60,4 +60,12 @@ fs.readFile('./4-order.js', 'utf8', () => {
   console.log('callback #14 readFile');
 });
 
+Promise.resolve().then(() => {
+  console.log('callback #15 Promise.then() callback');
+});
+
+Promise.resolve().then(() => {
+  console.log('callback #16 Promise.then() callback');
+});
+
 console.log('main ended');
