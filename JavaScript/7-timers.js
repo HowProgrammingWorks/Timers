@@ -5,8 +5,7 @@ const timers = require('node:timers');
 console.log(Object.keys(timers));
 
 console.log(
-  'setTimeout === timers.setTimeout = ' +
-  (setTimeout === timers.setTimeout)
+  'setTimeout === timers.setTimeout = ' + (setTimeout === timers.setTimeout),
 );
 
 console.dir({ setTimeout: setTimeout(() => {}, 0) });

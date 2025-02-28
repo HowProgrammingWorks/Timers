@@ -11,10 +11,12 @@ const electronics = [
   { name: 'HDMI cable', price: 10 },
 ];
 
-(async () => {
+const main = async () => {
   const iter = setInterval(1000, electronics);
   for await (const items of iter) {
     const item = items.shift();
     console.log({ item });
   }
-})();
+};
+
+main();
