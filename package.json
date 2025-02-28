@@ -1,15 +1,15 @@
 {
-  "name": "example",
-  "private": true,
-  "version": "1.1.0",
-  "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
-  "license": "MIT",
+  "name": "patterns",
+  "version": "1.0.0",
   "scripts": {
-    "test": "eslint ./Exercises; hpw",
-    "ci": "eslint ./Exercises && hpw"
+    "lint": "eslint . && prettier -c \"**/*.js\"",
+    "fix": "eslint . --fix && prettier --write \"**/*.js\""
   },
+  "author": "Timur Shemsedinov",
+  "private": true,
   "dependencies": {
-    "eslint": "^8.39.0",
-    "hpw": "^0.2.0"
+    "eslint": "^9.12.0",
+    "eslint-config-metarhia": "^9.1.0",
+    "prettier": "^3.3.3"
   }
 }
